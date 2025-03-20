@@ -315,16 +315,15 @@ public class Patterns {
 //            System.out.println();
 //        }
 
-        String revStr="";
 
-        for(int i=str.length()-1;i>=0;i--){
-            revStr+=str.charAt(i);
-        }
 
-        for(int j=0;j<rows;j++){
-            for(int i=0;i<j;i++){
-                System.out.print(revStr.charAt(i));
+
+        for(int j=0;j<=str.length()-1;j++){
+
+            for(int i=str.length()-1-j;i<=str.length()-1;i++){
+                System.out.print(str.charAt(i));
             }
+
             System.out.println();
         }
 
