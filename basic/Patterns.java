@@ -317,15 +317,114 @@ public class Patterns {
 
 
 
+//E
+//DE
+//CDE
+//BCDE
+//ABCDE
 
-        for(int j=0;j<=str.length()-1;j++){
+//        for(int j=0;j<=str.length()-1;j++){
+//
+//            for(int i=str.length()-1-j;i<=str.length()-1;i++){
+//                System.out.print(str.charAt(i));
+//            }
+//
+//            System.out.println();
+//        }
 
-            for(int i=str.length()-1-j;i<=str.length()-1;i++){
-                System.out.print(str.charAt(i));
+//        for(int j=0;j<=str.length()-1;j++){
+//
+//            for(int i=str.length()-1-j;i<=str.length()-1;i++){
+//                System.out.print(str.charAt(i));
+//            }
+//
+//            System.out.println();
+//        }
+
+//**********
+//****  ****
+//***    ***
+//**      **
+//*        *
+//*        *
+//**      **
+//***    ***
+//****  ****
+//**********
+//        for (int i=0;i<=rows;i++){
+//            for(int j=cols;j>=i;j--){
+//                System.out.print('*');
+//            }
+//            for(int j=1;j<=i;j++){
+//                System.out.print(' ');
+//            }
+//
+//            for(int j=1;j<=i;j++){
+//                System.out.print(' ');
+//            }
+//            for(int j=cols;j>=i;j--){
+//                System.out.print('*');
+//            }
+//            System.out.println();
+//        }
+//        for (int i=0;i<=rows;i++){
+//            for(int j=0;j<=i;j++){
+//                System.out.print('*');
+//            }
+//            for(int j=cols;j>i;j--){
+//                System.out.print(' ');
+//            }
+//
+//            for(int j=cols;j>i;j--){
+//                System.out.print(' ');
+//            }
+//            for(int j=0;j<=i;j++){
+//                System.out.print('*');
+//            }
+//            System.out.println();
+//        }
+//*          *
+//**        **
+//***      ***
+//****    ****
+//*****  *****
+//*****  *****
+//****    ****
+//***      ***
+//**        **
+//*          *
+
+        for (int i=0;i<=rows;i++){
+            for(int j=0;j<=i;j++){
+                System.out.print('*');
+            }
+            for(int j=cols;j>=i;j--){
+                System.out.print(' ');
+                System.out.print(' ');
             }
 
+            for(int j=0;j<=i;j++){
+                System.out.print('*');
+            }
             System.out.println();
         }
+        for (int i=0;i<=rows;i++){
+            for(int j=cols;j>=i;j--){
+                System.out.print('*');
+            }
+            for(int j=0;j<=i;j++){
+                System.out.print(' ');
+                System.out.print(' ');
+            }
+
+            for(int j=cols;j>=i;j--){
+                System.out.print('*');
+            }
+            System.out.println();
+        }
+
+
+
 
     }
 }
