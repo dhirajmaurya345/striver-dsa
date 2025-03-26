@@ -3,7 +3,7 @@ package basic;
 public class Patterns {
 
     public static void main(String[] args){
-        int rows=7;
+        int rows=6;
         int cols=4;
         int counter=1;
         String str="ABCDE";
@@ -443,14 +443,19 @@ public class Patterns {
 //        }
 
         for (int i=1;i<rows;i++){
-            for(int j=1;j<rows;j++){
-                if(j-i==0){
-                    System.out.print(1);
+            for(int x=1,j=rows;x<rows;x++){
+
+                System.out.print(j);
+                if(j-1>rows-i ){
+                    j--;
+                }
+                if(rows-i<rows & rows-i<=x){
+                    j++;
                 }
 
-                if(j==rows-1||i==rows-1||i==1||j==1){
-                    System.out.print(rows);
-                }
+
+
+
 
                 System.out.print(' ');
             }
