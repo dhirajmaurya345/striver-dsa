@@ -1,6 +1,7 @@
 package basic.selenium;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class BasicMaths {
     public static void main(String[] args) {
@@ -12,8 +13,19 @@ public class BasicMaths {
 //            call.armStrongNum(153);
 //        call.getAllDivisors(36);
 //        call.checkPrime(11);
-        call.recursion();
-
+//        call.recursion("Dheeraj",4);
+//        call.printNumberRecursion(2,12);
+//        call.printRecursion(2,12);
+//        System.out.println(call.printSumRecursion(5));
+//        System.out.println(call.factorialOfNum(4));
+//call.log();
+//        int[] ar={2,1,3,45,67,34};
+//        System.out.println(Arrays.toString(ar));
+//        call.reverseArray(ar,0, ar.length-1);
+//        System.out.println(Arrays.toString(ar));
+//        String str="accccca";
+//        call.palindrome(str,0,6);
+        call.printFibonacciSeries(5);
     }
 
     public void countDigit(int x) {
@@ -118,15 +130,99 @@ public class BasicMaths {
         System.out.println("Number is prime");
     }
 
-    int c=0;
-    public void recursion() {
-        if (c == 4) {return;   }
-        c++;
-        System.out.println(c);
-        recursion();
+    public void recursion(String name,int times) {
+        if (times==0) {return;   }
+        times--;
+        System.out.println(name);
+        recursion(name,times);
+    }
+
+    public void printNumberRecursion(int i,int x){
+        if(i>=x){ return;    }
+        System.out.println(i);
+        printNumberRecursion(i+1,x);
+    }
+
+    public void printRecursion(int i,int x){
+        if(i>=x){ return;    }
+        System.out.println(x);
+        printRecursion(i,x-1);
+    }
+
+
+    public int printSumRecursion(int x){
+        if(x==0){
+            return 0;
+        }
+        return x+printSumRecursion(x-1);
+    }
+
+    public int factorialOfNum(int x){
+
+        if(x==0){return 1;}
+
+        return x*factorialOfNum(x-1);
+    }
+
+    public void log(){
+
+//        int x=2;
+//        int y=3;
+//        System.out.println(Math.log(x)+Math.log(y));
+//        System.out.println(Math.log10(8000));
+//        System.out.println(Math.log(8)/Math.log(2));
+//        System.out.println(Math.log1p(8));
+//    int[] ar ={0,-1,20,-10};
+//    int largest=0;
+//    for(int i=0;i<ar.length-1;i++){
+//        if(ar[i]>ar[i+1]){
+//            largest=ar[i];
+//        }
+//        else {
+//            largest=ar[i+1];
+//        }
+//
+//    }
+//        System.out.println(largest);
+
 
     }
 
+//    public void reverseArray(int[] ar, int start, int end){
+//        if(start<end){
+//            int temp=ar[start];
+//            ar[start]=ar[end];
+//            ar[end]=temp;
+//            reverseArray(ar,start+1,end-1);
+//        }
+//    }
+
+//    public void palindrome(String str,int start, int end){
+//
+//        if(start==(str.length()-1)/2){
+//            System.out.println("Palindrome");
+//            return;
+//        }
+//        if(start<=end && str.charAt(start)==str.charAt(end)){
+//                 palindrome(str,start+1,end-1);
+//       }
+//        if(start<end && str.charAt(start)!=str.charAt(end)){
+//            System.out.println("Not Palindrome");
+//            return;
+//        }
+//    }
+
+    public void printFibonacciSeries(int N) {
+        for (int i = 0; i < N; i++) {
+            System.out.print(fibonacci(i) + " ");
+        }
+    }
+
+    public int fibonacci(int n) {
+        if (n <= 1)
+            return n;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
 
 
 }
